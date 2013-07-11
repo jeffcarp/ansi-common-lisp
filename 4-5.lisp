@@ -21,11 +21,11 @@
                    :r   (bst-insert obj (node-r bst) <)
                    :l   (node-l bst)))))))
 
+(defun bst-adjoin (obj bst <)
+  ; Same as insert, but don't overwrite
+
+)
 
 (let (best)
-  (setf best (bst-insert 4 best #'<))
-  (setf best (bst-insert 2 best #'<))
-  (setf best (bst-insert 3 best #'<))
-  (setf best (bst-insert 8 best #'<))
-  (setf best (bst-insert 7 best #'<))
+  (dolist (x '(4 1 3)) (setf best (bst-insert x best #'<)))
   (format t "~A ~%" best))
