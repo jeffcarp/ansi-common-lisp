@@ -11,7 +11,7 @@
       (let ((elt (node-elt bst)))
         (if (eql obj elt)
             bst
-            (if (funcall < obj elt)
+            (if (funcall < obj elt) ; I believe this was copied incorrectly
                 (make-node
                   :elt elt
                   :l   (bst-insert obj (node-l bst) <)
